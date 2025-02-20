@@ -1,0 +1,19 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-text {
+    margin-bottom: 4px;
+    font-size: small;
+}
+
+.outlet {
+    flex-grow: 1;
+}

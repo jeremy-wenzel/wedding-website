@@ -1,0 +1,34 @@
+.main-img {
+    max-width: 900px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.bullet {
+    margin: 0 4px; /* Adjust spacing if needed */
+    font-size: 1.2em;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.name-header {
+    /* margin-top: 4rem; */
+    font-size: 3.5em;
+    letter-spacing: .05em;
+    padding: 16px;
+}
+
+.intro {
+    margin-top: 4rem;
+}
+
+.bold {
+    font-weight: bold;
+    letter-spacing: .03em;
+}
