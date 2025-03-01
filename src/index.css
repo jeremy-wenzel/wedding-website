@@ -8,3 +8,18 @@ body {
 p {
   font-size: large;
 }
+
+a {
+  color: rgb(219, 219, 219);
+}
+
+div.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.text-center {
+  text-align: center;
+}

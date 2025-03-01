@@ -15,8 +15,8 @@ function App() {
     <Container>
       <BrowserRouter>
         <Routes>
+          <Route index element={<Home/>}/>
           <Route path='/' element={<Layout/>}>
-            <Route index element={<Home/>}/>
             <Route path='our-story' element={<OurStory/>} />
             <Route path='location' element={<Location/>} />
             <Route path='schedule' element={<Schedule/>} />

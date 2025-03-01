@@ -28,7 +28,7 @@ interface StoryAndDescriptionProps {
 
 function StoryAndDescription(props: StoryAndDescriptionProps) {
     return (
-        <Row>
+        <Row className='flex-center text-center'>
             <Image className='story-img' src={props.imgSrc} />
             <h5>{props.title}</h5>
             <p>{props.description}</p>
@@ -38,7 +38,7 @@ function StoryAndDescription(props: StoryAndDescriptionProps) {
 
 export default function OurStory() {
     return (
-        <div>
+        <div className='text-center'>
             <h1>Our Adventures</h1>
             <p>
                 Before getting engaged, Ari and Jeremy spent a lot of time together, going on numerous dates and trips. In each one, they were always happy 

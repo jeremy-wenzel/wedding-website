@@ -1,35 +1,20 @@
 import React from 'react';
-import { Nav, Row } from 'react-bootstrap';
+import {  Row } from 'react-bootstrap';
 import {Outlet} from 'react-router-dom';
 import './Layout.css';
+import NavigationBar from './NavigationBar.tsx';
 
 export default function Layout() {
     return (
         <div className='wrapper'>
-            {/* <div>
-                <Row>
-                    <h2>Arianna & Jeremy</h2>
+            <div>
+                <Row className='text-center'>
+                    <h2>Jeremy & Arianna</h2>
                 </Row>
-            </div> */}
-            {/* <div>
-                <Nav>
-                    <Nav.Item>
-                        <Nav.Link href='/'>Home</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href='/our-story'>Our Adventures</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href='/location'>Venue</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href='/schedule'>Schedule</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href='/registry'>Registry</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-            </div> */}
+            </div>
+            <div>
+                <NavigationBar/>
+            </div>
             <div className='outlet'>
                 <Outlet />
             </div>

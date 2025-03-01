@@ -1,0 +1,8 @@
+.nav-bar {
+    display: flex;
+    justify-content: center;;
+}
+
+.link {
+    color: rgb(219, 219, 219);
+}

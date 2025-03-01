@@ -2,6 +2,7 @@ import React from 'react';
 import AriAndJeremy from './img/jeremy-ari.jpg';
 import { Image, Row } from 'react-bootstrap';
 import './Home.css';
+import NavigationBar from './NavigationBar.tsx';
 export default function Home() {
     const today = new Date();
     const weddingDate = new Date(2025, 7, 23); // August is month 7 (zero-based index)
@@ -20,6 +21,9 @@ export default function Home() {
         <Row>
             <h5 className='location-header'>August 23, 2025 <span className='bullet'>•</span> Kent, WA</h5>
             <h5 className='location-header'>{diffDays} days to go!</h5>
+        </Row>
+        <Row>
+            <NavigationBar/>
         </Row>
         <Row className='justify-content-center'>
             <Image className="main-img" src={AriAndJeremy} fluid/>

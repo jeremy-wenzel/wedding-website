@@ -3,7 +3,7 @@ import React from 'react';
 export default function Registry() {
     return (
         <div>
-            <h1>Registry</h1>
+            <h1 className='text-center'>Registry</h1>
             <p>
                 While we would be more than appreciative of gifts that would go towards our honey moon in New Zealand, exploring the realm of Middle-Earth,
                 we don't want you to feel obligated to have to give us anything. We are more happy to have you join us on our special day.
