@@ -32,3 +32,18 @@
     font-weight: bold;
     letter-spacing: .03em;
 }
+
+.rsvp-button {
+  background-color: #F8C8DC !important;
+  border-color: #F8C8DC !important;
+  color: #333 !important;
+  font-weight: 600;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+}
+
+.rsvp-button:hover {
+  background-color: #f6b6d0 !important;
+  border-color: #f6b6d0 !important;
+  transform: scale(1.05);
+}

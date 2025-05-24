@@ -1,8 +1,9 @@
 import React from 'react';
 import AriAndJeremy from './img/jeremy-ari.jpg';
-import { Image, Row } from 'react-bootstrap';
+import { Image, Row, Button } from 'react-bootstrap';
 import './Home.css';
 import NavigationBar from './NavigationBar.tsx';
+import { Link } from 'react-router-dom';
 export default function Home() {
     const today = new Date();
     const weddingDate = new Date(2025, 7, 23); // August is month 7 (zero-based index)
@@ -52,9 +53,12 @@ export default function Home() {
                 on the kitchen that had some goodies from the realtor, he knew that was the perfect moment. He got on one knee, and she said "What are you doing? Oh shit! Oh my Gosh!"
                 He asked his bestest-best friend to become his bestest-best wife.
             </p>
-            <p>
-                She said "YES"!
+            <p>                She said "YES"!
             </p>
+        </Row>        <Row className="mt-4 mb-5 justify-content-center">
+            <Link to="/rsvp" style={{ textDecoration: 'none' }}>
+                <Button className="rsvp-button" size="lg">RSVP Now</Button>
+            </Link>
         </Row>
     </div>
     )

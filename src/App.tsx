@@ -9,6 +9,8 @@ import OurStory from './OurStory.tsx';
 import Location from './Location.tsx';
 import Schedule from './Schedule.tsx';
 import Registry from './Registry.tsx';
+import RSVP from './RSVP.tsx';
+import RSVPAdmin from './RSVPAdmin.tsx';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path='location' element={<Location/>} />
             <Route path='schedule' element={<Schedule/>} />
             <Route path='registry' element={<Registry/>} />
+            <Route path='rsvp' element={<RSVP/>} />
+            <Route path='rsvp-admin' element={<RSVPAdmin/>} />
             <Route path="*" element={<Page404/>}/>
           </Route>
         </Routes>

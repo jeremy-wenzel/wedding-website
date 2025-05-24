@@ -1,25 +1,29 @@
 import React from 'react';
-import {Nav} from 'react-bootstrap';
-import "./NavigationBar.css"
+import { Col, Row, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './NavigationBar.css';
 
 export default function NavigationBar() {
     return (
-        <Nav className='nav-bar'>
-            <Nav.Item>
-                <Nav.Link className='link' href='/'>Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link className='link' href='/our-story'>Our Adventures</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link className='link' href='/location'>Venue</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link className='link' href='/schedule'>Schedule</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link className='link' href='/registry'>Registry</Nav.Link>
-            </Nav.Item>
-        </Nav>
+        <Row className='justify-content-center'>
+            <Col xs="auto">
+                <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
+            </Col>
+            <Col xs="auto">
+                <Nav.Link as={Link} to="/our-story" className="nav-link">Our Adventures</Nav.Link>
+            </Col>
+            <Col xs="auto">
+                <Nav.Link as={Link} to="/location" className="nav-link">Venue</Nav.Link>
+            </Col>
+            <Col xs="auto">
+                <Nav.Link as={Link} to="/schedule" className="nav-link">Schedule</Nav.Link>
+            </Col>
+            <Col xs="auto">
+                <Nav.Link as={Link} to="/registry" className="nav-link">Registry</Nav.Link>
+            </Col>
+            <Col xs="auto">
+                <Nav.Link as={Link} to="/rsvp" className="nav-link">RSVP</Nav.Link>
+            </Col>
+        </Row>
     );
 }
