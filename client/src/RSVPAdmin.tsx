@@ -11,16 +11,22 @@ export default function RSVPAdmin() {
         totalDeclined: 0,
         totalPending: 0,
         totalGuestCount: 0
-    });
-
-    useEffect(() => {
-        // Load guest data
-        const guestList = getAllGuests();
-        setGuests(guestList);
+    });    useEffect(() => {
+        const loadData = async () => {
+            try {
+                // Load guest data
+                const guestList = await getAllGuests();
+                setGuests(guestList);
+                
+                // Load stats
+                const rsvpStats = await getRsvpStats();
+                setStats(rsvpStats);
+            } catch (error) {
+                console.error('Error loading RSVP data:', error);
+            }
+        };
         
-        // Load stats
-        const rsvpStats = getRsvpStats();
-        setStats(rsvpStats);
+        loadData();
     }, []);
 
     const getStatusBadge = (status: string) => {

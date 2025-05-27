@@ -11,9 +11,7 @@ export default function RSVP() {
     const [dietary, setDietary] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [error, setError] = useState('');
-
-    const handleSubmit = async (e) => {
+    const [error, setError] = useState('');    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         setError('');
@@ -29,16 +27,17 @@ export default function RSVP() {
             
             if (success) {
                 setSubmitted(true);
+                console.log('RSVP submitted successfully to server');
             } else {
-                setError('There was a problem submitting your RSVP. Please try again.');
+                setError('There was a problem submitting your RSVP. Please try again later.');
             }
         } catch (err) {
-            setError('There was a problem submitting your RSVP. Please try again.');
-            console.error(err);
+            console.error('Error submitting RSVP:', err);
+            setError('There was a problem connecting to the server. Please try again later.');
         } finally {
             setIsSubmitting(false);
         }
-    };    return (
+    };return (
         <div className='text-align-center'>
             <Row>
                 <h1 className='name-header'>RSVP</h1>
