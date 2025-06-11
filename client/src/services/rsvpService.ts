@@ -2,13 +2,15 @@
 // For fallback, we can import the data directly if needed
 // import rsvpData from '../data/rsvp-list.json';
 
+import config from './environment-config.ts';
+
 // Type definitions
 export interface GuestData {
   id: number;
   name: string;
   email: string;
   status: 'pending' | 'confirmed' | 'declined';
-  plusOnes: number;
+  totalGuests: number;
   dietary: string;
   inviteCode: string;
 }
@@ -22,7 +24,7 @@ export interface RsvpSubmission {
 }
 
 // API URL for the server
-const API_URL = 'http://localhost:3000'; // Update this with your actual server URL in production
+const API_URL = config.apiUrl;
 
 // Get all guests
 export const getAllGuests = async (): Promise<GuestData[]> => {
@@ -74,14 +76,13 @@ export const submitRsvp = async (submission: RsvpSubmission): Promise<boolean> =
 // For admin use - get RSVP statistics
 export const getRsvpStats = async () => {
   const guests = await getAllGuests();
-  
   return {
     totalInvited: guests.length,
     totalConfirmed: guests.filter(g => g.status === 'confirmed').length,
     totalDeclined: guests.filter(g => g.status === 'declined').length,
     totalPending: guests.filter(g => g.status === 'pending').length,
     totalGuestCount: guests.reduce((acc, guest) => {
-      return acc + (guest.status === 'confirmed' ? guest.plusOnes + 1 : 0);
+      return acc + (guest.status === 'confirmed' ? guest.totalGuests : 0);
     }, 0)
   };
 };

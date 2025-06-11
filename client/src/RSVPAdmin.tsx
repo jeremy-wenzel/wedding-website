@@ -94,12 +94,11 @@ export default function RSVPAdmin() {
                     </thead>
                     <tbody>
                         {guests.map(guest => (
-                            <tr key={guest.id}>
-                                <td>{guest.id}</td>
+                            <tr key={guest.id}>                                <td>{guest.id}</td>
                                 <td>{guest.name}</td>
                                 <td>{guest.email}</td>
                                 <td>{getStatusBadge(guest.status)}</td>
-                                <td>{guest.plusOnes + 1}</td>
+                                <td>{guest.totalGuests}</td>
                                 <td>{guest.dietary || '-'}</td>
                                 <td>{guest.inviteCode}</td>
                             </tr>

@@ -7,7 +7,7 @@ interface GuestData {
   name: string;
   email: string;
   status: 'pending' | 'confirmed' | 'declined';
-  plusOnes: number;
+  totalGuests: number;
   dietary: string;
   inviteCode: string;
 }
@@ -65,7 +65,7 @@ app.post('/api/rsvp', (req: Request, res: Response) => {
     // Get existing guests
     const fs = require('fs');
     const path = require('path');
-    const guestsFilePath = path.join(__dirname, '../../data/rsvp-list.json');
+    const guestsFilePath = path.join(__dirname, '../data/rsvp-list.json');
     
     let guestsList = [];
     try {
@@ -98,7 +98,7 @@ app.post('/api/rsvp', (req: Request, res: Response) => {
         name,
         email,
         status,
-        plusOnes: Number(guests) || 0,
+        totalGuests: Number(guests) || 0,
         dietary: dietary || '',
         inviteCode: '' // No invite code for self-RSVPs
       };
@@ -118,7 +118,7 @@ app.post('/api/rsvp', (req: Request, res: Response) => {
         ...guestsList[guestIndex],
         name, // Update name in case it was entered differently
         status,
-        plusOnes: Number(guests) || 0,
+        totalGuests: Number(guests) || 0,
         dietary: dietary || ''
       };
       
@@ -142,7 +142,7 @@ app.get('/api/admin/guests', (req: Request, res: Response) => {
   try {
     const fs = require('fs');
     const path = require('path');
-    const guestsFilePath = path.join(__dirname, '../../data/rsvp-list.json');
+    const guestsFilePath = path.join(__dirname, '../data/rsvp-list.json');
     
     let guestsList = [];
     try {

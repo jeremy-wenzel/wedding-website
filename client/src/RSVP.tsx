@@ -43,7 +43,7 @@ export default function RSVP() {
                 <h1 className='name-header'>RSVP</h1>
             </Row>
             <Row>
-                <h5 className='location-header'>Please respond by June 15, 2025</h5>
+                <h5 className='location-header'>Please respond by July 31, 2025</h5>
             </Row>
             <Container className="mt-4">{!submitted ? (
                     <Form onSubmit={handleSubmit}>
