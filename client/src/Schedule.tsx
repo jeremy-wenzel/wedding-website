@@ -9,7 +9,7 @@ export default function Schedule() {
             <h5>Ceremony - 12:30</h5>
             <p>Ceremony and procession begins</p>
             <h5>Pictures - 1pm</h5>
-            <p>Pictures with family and friends. During this time, please feel free to enjoy the drinks, snacks, and ice cream truck.</p>
+            <p>Pictures with family and friends. During this time, please feel free to enjoy the drinks, snacks, and an ice cream truck.</p>
             <h5>Reception - 4pm at Happy Lamb Hot Pot</h5>
             <p>The reception will be at the Happy Lamb Hot Pot resturant in Belveue. It is approximately 40 minutes away from the venue, so please leave plenty of time for driving</p>
             <p>Note: Happy Lamb Hot Pot has very limited parking. Resturants surrounding Happy Lamb will tow if you are parked in their lot. If possible, please park at the Crossroads Bellevue mall, just a 5 minute walk away.</p>

@@ -6,6 +6,9 @@ export default function Location() {
         <div>
             <h1 className='text-center'>Venue</h1>
             <p>The venue of our wedding is going to be our new home, 11231 SE 220th Pl, Kent, WA, 98031. This is our forever home where Jeremy proposed and where we will spending the next many years together. It seemed perfect to make this the place that we also get married.</p>
+            <h3>Dress attire: Semi-formal.</h3>
+            <p>Gentlemen: Shirt & Tie</p>
+            <p>Ladies: A dress</p>
             <h5>Carpool - Please Read</h5>
             <p>In consideration of our neighbors, we kindly ask that you make your best effort to carpool to the venue. We do have quite a bit of parking but we don't want to impact the routines of our neighbors with the large number of cars.</p>
             <iframe
